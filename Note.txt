@@ -1,0 +1,4 @@
+FullStack JavaScript
+
+1. npm install -g create-react-app (di cmd)
+2. Masuk ke folder yang akan dibuat ketik npx create-react-app . 
