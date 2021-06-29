@@ -3,3 +3,6 @@ FullStack JavaScript
 1. npm install -g create-react-app (di cmd)
 2. Masuk ke folder yang akan dibuat ketik npx create-react-app . 
 npm isntall react-router-dom (fungsinya untuk navigasi di aplikasi) node -sass (untuk preprocessornya)
+
+*Shortcut React native/JS
+- rfc = import React from 'react'
