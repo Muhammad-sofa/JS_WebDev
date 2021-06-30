@@ -6,3 +6,4 @@ npm isntall react-router-dom (fungsinya untuk navigasi di aplikasi) node -sass (
 
 *Shortcut React native/JS
 - rfc = import React from 'react'
+- imp = import moduleName from 'module'

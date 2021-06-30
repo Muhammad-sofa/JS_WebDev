@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import modulName from 'elements/button'
+import modulName from 'elements/Button'
 
 export default class LandingPage extends Component {
      render() {
