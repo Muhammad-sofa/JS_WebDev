@@ -1,0 +1,13 @@
+{
+  "duration": "2",
+  "price": "240",
+  "bookingDateStart": "new Date()",
+  "bookingDateEnd": "new Date()",
+  "firstName": "Sofa",
+  "lastName": "Yuliansyah",
+  "emailAddress": "muhammadsofa52@yahoo.com",
+  "phoneNumber": "081234725234",
+  "accountHolder": "Sofa Yuliansyahs",
+  "bankFrom": "BCA",
+  "proofPayment": "FileData()"
+}
