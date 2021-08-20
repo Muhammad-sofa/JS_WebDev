@@ -2,7 +2,7 @@ import React from "react";
 
 import propTypes from "prop-types";
 
-import "./index";
+import "./index.scss";
 
 export default function Star({ className, value, height, width, spacing }) {
   const decimals = Number(value) % 1;
