@@ -18,7 +18,6 @@ export default function Hero(props) {
     });
   }
 
-  //number format with internatinalization browser API
   function numberFormat(number) {
     const formatNumbering = new Intl.NumberFormat("id-ID");
     return formatNumbering.format(number);
@@ -57,7 +56,7 @@ export default function Hero(props) {
                 alt={`${props.data.travelers} Travelers`}
               />
               <h6 className="mt-3">
-                {formatNumber(props.data.travelers)}{" "}
+                {numberFormat(props.data.travelers)}{" "}
                 <span className="text-gray-500 font-weight-light">
                   Travelers
                 </span>
@@ -72,7 +71,7 @@ export default function Hero(props) {
                 alt={`${props.data.treasures} Treasures`}
               />
               <h6 className="mt-3">
-                {formatNumber(props.data.treasures)}{" "}
+                {numberFormat(props.data.treasures)}{" "}
                 <span className="text-gray-500 font-weight-light">
                   treasures
                 </span>
@@ -87,7 +86,7 @@ export default function Hero(props) {
                 alt={`${props.data.cities} Cities`}
               />
               <h6 className="mt-3">
-                {formatNumber(props.data.treasures)}{" "}
+                {numberFormat(props.data.treasures)}{" "}
                 <span className="text-gray-500 font-weight-light">cities</span>
               </h6>
             </div>
