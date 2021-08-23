@@ -21,7 +21,7 @@ export default function Testimony({ data }) {
               src={TestimonyAccent}
               alt="Testimonial Frame"
               className="position-absolute"
-              style={{ margin: `-30px 0 0 -30px`, zIndex: 1 }}
+              style={{ margin: `-30px 0 0 -30px` }}
             />
           </div>
         </div>
@@ -42,7 +42,9 @@ export default function Testimony({ data }) {
               isPrimary
               type="link"
               href={`/testimonial/${data._id}`}
-            ></Button>
+            >
+              Read Their Story
+            </Button>
           </div>
         </div>
       </div>
