@@ -1,28 +1,64 @@
-import React, { useState, useRef, useEffect } from "react";
-import propTypes from "prop-types";
+import React from "react";
+import { render, fireEvent } from "@testing-library/react";
+import { screen } from "@testing-library/dom";
+import InputDate from "./index";
 
-import { DateRange } from "react-date-range";
+class TestInput extends React.Component {
+  state = {
+    value: {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  };
 
-import "./index.scss";
-import "react-date-range/dist/styles.css"; //main css file
-import "react-date-range/dist/theme/default.css"; //theme css file
+  handleChange = (e) => {
+    this.setState({ value: e.target.value });
+  };
 
-import formatDate from "utils/formatDate";
-import iconCalender from "assets/images/ic_calendar.svg";
-
-componentDidMount() {
-window.title = "Home"
+  render() {
+    return (
+      <InputDate
+        max={30}
+        onChange={this.handChange}
+        name="value"
+        value={this.state.value}
+      />
+    );
+  }
 }
 
-componentDidUpdate(prevProps, prevState) {
-     if(prevProps !== this.props){
+const setup = () => {
+  const { container } = render(<TestInput />);
+  const wrapper = container.querySelector(`.input-date`);
+  const input = container.querySelector(`input.form-control`);
 
-     }
-     if(prevState !== this.state){
+  return {
+    container,
+    wrapper,
+    input,
+  };
+};
 
-     }
-}
+test("Should have wrapper with classname .form-control", () => {
+  const { wrapper } = setup();
 
-useEffect(() => {
-     window.title = "Home"
-}, [state])
+  expect(wrapper).toBeInTheDocument();
+});
+
+test("Should have tag <input> and has className .form-control", () => {
+  const { input } = setup();
+
+  expect(input).toBeInTheDocument();
+});
+
+test("Should show date picker when click input field", () => {
+  const { container, input } = setup();
+
+  // screen.debug();
+  fireEvent.click(input, { button: 1 });
+  const datePickerWrapper = container.querySelector(".date-range-wrapper");
+  // screen.debug();
+
+  expect(datePickerWrapper).toBeInTheDocument();
+});
